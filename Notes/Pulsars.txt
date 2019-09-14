@@ -1,0 +1,39 @@
+				A strange event
+In 1967, a Cambridge university Ph.D. student named Locelyn Bell found something
+strange in her radio Astronomy Data. A very faint blip coming from one part of the sky that repeated
+every 1.3 seconds with incredible precision. It was so uniform that Bell and her supervison, Anthony
+Hewish, nicknamed their discovery LGM-1 for Little Green Men. They figured out it wasn't really a
+signal from Alein civilization but how else to explain such a astoundinly regular signal from space.
+				
+				A Supernova
+In the 1930s, astronomers Volta Badda and Fritz Zwicky were searching for an explanation for
+supernova which is a stupendous explotion that makes the death of some stars and which can for
+a little while at least outshine the entire galaxy. When the subatomic particle called the neutron
+was discovered in 1932, Badda and Zwichy realized it could solve their problem. They suggested when 
+old star runs out of fuel, it rapidly collapsesunder its own gravity. The star's core suddenly
+transforms into a super dense ball of neutrons, and the outer layers of the star bounces in a massive
+explosion of light and energy, a supernova. The dense core that remains behind, dubs a neutron star,
+would have the mass of two or three suns squeezed down into the size of a large city. 
+				
+				A theoritical explation
+Until the 1960's, neutron starts were assumed to be too dim to be seen by a telescope. But in 1960's,
+astronomers realized that when a star suddenly collapses like this, two interesting things can happen.
+Stars typically rotate once every few days. The law of conservation of angular momentum says, that when 
+a star collapses the rotation speeds up. 
+{
+Why? w1 * l1 = w2 * l2.
+Considering, l = (mr^2 / g) where g is the radius of gyration (a constant).
+We have, w1 * (mr1^2 / g) = w2 * (mr2^2 / g)
+       => w2 = w1 * ( r1 / r2 )^2.
+}
+Now, collapsed star has r2 << r1 which means its angular momentum increases by a large factor.
+So, a neutron star can be spinning anything from a time period of 1 second to tens or even hundereds
+seconds. Also, like earth, a star has its own magnetic field and when it collapses, it takes its 
+magnetic fields with it. This creates incredibly intense magnetic fields. Charged particles in a 
+super-hot plasma surrounding a neutron star, would get funneled towards the stars magnetic poles
+and shot out into space as two intense beams. Put these two ideas together, and a neutron star
+becomes a bit like a lighthouse, rapidly spinning in space, flashing its energy beam accross the universe.
+And suddenly the signal that Bell and Hewish found with their radio telescope made sense. Regular
+pulses they saw with beams of a spinning neutron star sweeping past the Earth every 1.3 seconds.
+When they and the other astronomers looked around the sky, they found more spinning neutron stars.
+Some of it were slower and some were faster. They called them Pulsars.
