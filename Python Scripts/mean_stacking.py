@@ -8,9 +8,10 @@ pulsar detections have been centered.
 
 """
 
-from astropy.io import fits
-import matplotlib.pyplot as plt
-import numpy as np
+# Astropy is a scientific liblarary to work with astronomical data
+from astropy.io import fits # Used to extract FITS datafiles.
+import matplotlib.pyplot as plt # Used to plot beautiful images
+import numpy as np # Used to work with ray images
 
 def mean_stack(image_list):
     """
