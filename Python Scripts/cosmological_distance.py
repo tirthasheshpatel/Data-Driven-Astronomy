@@ -1,3 +1,15 @@
+"""
+This script is used to find the projected angular distance 
+between two astronomical objects. This information can be used to assert
+the type of object detected by two different telescopes at different
+radio wavelenghts from two different locations using a powerful algorithm
+called cross-matching algorithm! 
+We recieve information of the right ascention in HMS form and declination
+in DMS form. 
+Our bss.dat file contains 320 data-points in the form: rah, ram, ras, dd, dm, ds
+where rah = right ascension hour, ram = right ascension minute, etc
+Similarly, super.csv contains 500 data-points of same form but from a different catalogue!
+"""
 import numpy as np
 
 def hms2dec(h,m,s):
