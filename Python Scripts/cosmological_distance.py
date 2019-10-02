@@ -76,3 +76,18 @@ if __name__ == '__main__':
     print(find_closest(cat, 175.3, -32.5))
 
     print(find_closest(cat, 32.2, 40.7))
+
+    bss_cat = import_bss()
+    super_cat = import_super()
+
+    max_dist = 40/3600
+    matches, no_matches = crossmatch(bss_cat, super_cat, max_dist)
+    print(matches[:3])
+    print(no_matches[:3])
+    print(len(no_matches))
+
+    max_dist = 5/3600
+    matches, no_matches = crossmatch(bss_cat, super_cat, max_dist)
+    print(matches[:3])
+    print(no_matches[:3])
+    print(len(no_matches))
