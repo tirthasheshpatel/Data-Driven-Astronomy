@@ -42,6 +42,23 @@ def find_closest(cat, targetRA, targetD):
             closest = current
     return closestID+1, closest
 
+def crossmatch(cat1, cat2, radius):
+    matches = []
+    no_matches = []
+    for id1 in range(cat1.shape[0]):
+        closest_id2 = None
+        closest_dist = np.inf
+        for id2 in range(cat2.shape[0]):
+            current = angular_dist(hms2dec(*cat1[id1][0:3]), dms2dec(*cat1[id1][3:6]), cat2[id2][0], cat2[id2][1])
+            if current < closest_dist:
+                closest_id2 = id2
+                closest_dist = current
+            if closest_dist > radius:
+                no_matches.append(id1+1)
+            else:
+                matches.append((id1+1, closest_id2+1, closest_dist))
+    return matches, no_matches
+
 
 if __name__ == '__main__':
     print(hms2dec(23, 12, 6))
