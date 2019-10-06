@@ -20,6 +20,19 @@ import numpy as np
 def hms2dec(h,m,s):
     """
     Converts HMS (hour minute second) to floating point.
+    Usually accepts the right ascention in HMS form.
+
+    Parameters
+    ----------
+    h: :type:`float` Hour of right ascension
+
+    m: :type:`float` Minites in right ascention
+
+    s: :type:`float` Seconds in right ascension
+
+    Examples
+    --------
+    >>> from cosmological_distance import hms2dec
     >>> h,m,s = 4, 6.6, 34
     >>> hms2dec(h,m,s)
     61.791666666666664
@@ -31,7 +44,20 @@ def hms2dec(h,m,s):
 # two objects.
 def dms2dec(d,m,s):
     """
-    Converts DMS (degree minute second) to floating points.
+    Converts DMS (degree arch-minute arch-second) to floating points.
+    Usually accepts the declination in DMS form.
+
+    Parameters
+    ----------
+    d: :type:`float` Degree of declination
+    
+    m: :type:`float` Arch-minutes of declination
+    
+    s: :type:`float` Arch-seconds of declination
+
+    Examples
+    --------
+    >>> from cosmological_distance import dms2dec
     >>> d,m,s = -16, 36.5, 4.4
     >>> dms2dec(d,m,s)
     -16.609555555555556
@@ -47,8 +73,23 @@ def angular_dist(r1, d1, r2, d2):
     Calculates the projected angular distance between two
     astronomical objects on the cosmological sphere using
     haversine formula.
+
     Accepts as arguments the right ascention and declination
     of two objects between which distance is to be evaluated.
+
+    Parameters
+    ----------
+    r1: :type:`float` Right Ascention of first astronomical object.
+    
+    d1: :type:`float` Declination of the first astronomical object.
+    
+    r2: :type:`float` Right ascension of second astronomical object.
+    
+    d2: :type:`float` Declination of the second astronomical object.
+
+    Examples
+    --------
+    >>> from cosmological_distance import angular_dist
     >>> r1, d1, r2, d2 = 10.2, 12.3, 6.4, -8.8
     >>> angular_dist(r1, d1, r2, d2)
     21.435312977951494
@@ -59,7 +100,10 @@ def angular_dist(r1, d1, r2, d2):
 
 def import_bss():
     """
-    Importing the BSS dataset.
+    Importing the ``bss`` dataset.
+
+    Examples
+    --------
     >>> dataset = import_bss()
     """
     cat = np.loadtxt('cross-matching/bss.dat', usecols=range(1,7))
@@ -67,16 +111,31 @@ def import_bss():
 
 def import_super():
     """
-    Imorting the dataset.
+    Imorting the ``superCOSMOS`` dataset.
+
+    Examples
+    --------
     >>> dataset = import_super()
     """
     cat = np.loadtxt('cross-matching/super.csv', delimiter=',', skiprows=1, usecols=[0, 1])
     return cat
 
 def find_closest(cat, targetRA, targetD):
-    """
-    Finds the distace between objects to be detected and to be
-    validated from the catalogue.
+    """Finds the most similar instance of the target object in the catalouge.
+
+    .. version :: `non-vectorized`
+
+    Parameters
+    ----------
+    cat: :type:`np.array` Catalouge of objects.
+
+    targetRA: :type:`float32` Right ascension of the target astronomical object.
+
+    targetD: :type:`float32` Declination of the target astronomical object.
+
+    Exmaples
+    --------
+    >>> from cosmological_distance import find_closest
     >>> find_closest(cat, 10.0, 20.0)
     """
 
